@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="Definitions_1yo42kj" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.1.2">
+  <decision id="CalculateStatus_mineco" name="CalculateStatus">
+    <extensionElements>
+      <biodi:bounds x="150" y="150" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="FIRST">
+      <input id="InputClause_00roro6" label="Approve1">
+        <inputExpression id="LiteralExpression_1jvkysb" typeRef="boolean">
+          <text>Approve1</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ocnjym" label="Approve2">
+        <inputExpression id="LiteralExpression_0y7f31a" typeRef="boolean">
+          <text>Approve2</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1m1ud1c" label="Comment1">
+        <inputExpression id="LiteralExpression_1o9ivyz" typeRef="string">
+          <text>Comment1</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_071qltu" label="Comment2">
+        <inputExpression id="LiteralExpression_13cwuzc" typeRef="string">
+          <text>Comment2</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="ResultStatus" name="ResultStatus" typeRef="integer" />
+      <rule id="DecisionRule_14mvvta">
+        <description>Отклонено</description>
+        <inputEntry id="UnaryTests_0v2pidw">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ld3goj">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oya064">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sdvilg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1y3g9wg">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t3eqg9">
+        <description>На уточнении</description>
+        <inputEntry id="UnaryTests_1o5ntev">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06c33vx">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hlvfnw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l61ns5">
+          <text>not("")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16kc4qq">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14x9gss">
+        <description>На уточнении</description>
+        <inputEntry id="UnaryTests_0ew1a3o">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0aevyli">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ut1en3">
+          <text>not("")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1928h5q">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1r7d3aq">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p4ug3b">
+        <description>На уточнении</description>
+        <inputEntry id="UnaryTests_0k3rf6b">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b3ht9r">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0njofk5">
+          <text>not("")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0idwlup">
+          <text>not("")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oo5nm1">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17auhvf">
+        <description>Отклонено</description>
+        <inputEntry id="UnaryTests_18smbe9">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vja1d3">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g1leqn">
+          <text>not("")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f0b5av">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tdamts">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0amvpf8">
+        <description>Отклонено</description>
+        <inputEntry id="UnaryTests_0wuz0xn">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hrzge2">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xdink1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jrpo9m">
+          <text>not("")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ovi4q8">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15xdaw4">
+        <description>Отклонено</description>
+        <inputEntry id="UnaryTests_1rztqmr">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_025i0h9">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1chhlq4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e86pk6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kdudaf">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01olj5s">
+        <description>Согласовано</description>
+        <inputEntry id="UnaryTests_1oxhc0c">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08ol9u0">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g7twlh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0svv688">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cd1h7d">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0az0t1n">
+        <description>Отклонено</description>
+        <inputEntry id="UnaryTests_0dmdjjg">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_150uxqr">
+          <text>false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_093ms2z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aje9gh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1067nsu">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
